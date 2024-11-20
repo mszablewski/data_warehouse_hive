@@ -32,3 +32,7 @@ SELECT * FROM Courses_tmp WHERE course_year = "third year" PARTITION (course_yea
 
 INSERT INTO Courses
 SELECT * FROM Courses_tmp WHERE course_year = "fourth year" PARTITION (course_year="fourth year");
+
+-- create date table (external table)
+CREATE EXTERNAL TABLE Dates(date_id int, full_date date, year int, month string, month_no int)
+LOCATION 'hdfs:///user/andb44/database/dates';
