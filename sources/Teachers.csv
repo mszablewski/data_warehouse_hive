@@ -1,31 +1,31 @@
 teacher_ID,teacher_name,teacher_surname,teacher_address
-1,Martyna,Kozlowska,Gdynia Derdowskiego 35 a/8
-2,Mateusz,Wozniak,Gdynia Jana z Kolna 63 b/4
-3,Wiktoria,Krawczyk,Gdynia Wiczlina 22 c/4
-4,Laura,Krawczyk,Gdynia Armii Krajowej 46 a/6
-5,Barbara,Grabowska,Gdynia Kaszubska 49 61 c/8
-6,Aleksandra,Jankowska,Gdynia Swietokrzyska 77 a/9
-7,Nadia,Jankowska,Gdynia Jana z Kolna 3 a/7
-8,Karolina,Kwiatkowska,Gdynia Kosciuszki 23 c/9
-9,Nikola,Nowak,Gdynia Komuny Paryskiej 42 a/5
-10,Martyna,Krawczyk,Gdynia Chwarznienska 5 b/9
-11,Aleksandra,Wojciechowska,Gdynia Morska 96 a/8
-12,Magdalena,Kaminska,Gdynia Marynarki Polskiej 23 89 c/5
-13,Klara,Kowalska,Gdynia Morska 93 b/4
-14,Lilianna,Piotrowska,Gdynia Paderewskiego 32 b/10
-15,Antonina,Jankowska,Gdynia Powstania Styczniowego 94 b/5
-16,Kornelia,Krawczyk,Gdynia Swietojanska 54 a/8
-17,Nadia,Wojcik,Gdynia Kaszubska 49 82 a/5
-18,Agata,Nowak,Gdynia Komuny Paryskiej 82 c/8
-19,Jagoda,Mazur,Gdynia Polska 56 b/5
-20,Aleksandra,Kowalska,Gdynia Starowiejska 16 b/5
-21,Laura,Dabrowska,Gdynia Akademicka 12 a/1
-22,Aleksandra,Lewandowska,Gdynia Slowackiego 97 b/4
-23,Michalina,Szymanska,Gdynia Polska 27 b/1
-24,Jagoda,Kowalczyk,Gdynia Derdowskiego 12 c/4
-25,Wiktoria,Krawczyk,Gdynia Wiczlina 80 a/8
-26,Nikola,Nowak,Gdynia Derdowskiego 33 a/9
-27,Nikola,Wozniak,Gdynia Chwarznienska 5 a/1
-28,Aleksandra,Krawczyk,Gdynia Marynarki Polskiej 23 88 c/1
-29,Jagoda,Dabrowska,Gdynia Jana z Kolna 91 a/9
-30,Gabriela,Wojciechowska,Gdynia Legionow 59 b/10
+1,Martyna,surname:Kozlowska,Gdynia Derdowskiego 35 a/8
+2,Mateusz,surname:Wozniak|maiden_name:Dabrowska,Gdynia Jana z Kolna 63 b/4
+3,Wiktoria,surname:Krawczyk,Gdynia Wiczlina 22 c/4
+4,Laura,surname:Krawczyk,Gdynia Armii Krajowej 46 a/6
+5,Barbara,surname:Grabowska,Gdynia Kaszubska 49 61 c/8
+6,Aleksandra,surname:Jankowska|maiden_name:Nowak,Gdynia Swietokrzyska 77 a/9
+7,Nadia,surname:Jankowska,Gdynia Jana z Kolna 3 a/7
+8,Karolina,surname:Kwiatkowska,Gdynia Kosciuszki 23 c/9
+9,Nikola,surname:Nowak,Gdynia Komuny Paryskiej 42 a/5
+10,Martyna,surname:Krawczyk|maiden_name:Jankowska,Gdynia Chwarznienska 5 b/9
+11,Aleksandra,surname:Wojciechowska,Gdynia Morska 96 a/8
+12,Magdalena,surname:Kaminska,Gdynia Marynarki Polskiej 23 89 c/5
+13,Klara,surname:Kowalska,Gdynia Morska 93 b/4
+14,Lilianna,surname:Piotrowska|maiden_name:Labudda,Gdynia Paderewskiego 32 b/10
+15,Antonina,surname:Jankowska,Gdynia Powstania Styczniowego 94 b/5
+16,Kornelia,surname:Krawczyk,Gdynia Swietojanska 54 a/8
+17,Nadia,surname:Wojcik|maiden_name:Kowalska,Gdynia Kaszubska 49 82 a/5
+18,Agata,surname:Nowak,Gdynia Komuny Paryskiej 82 c/8
+19,Jagoda,surname:Mazur,Gdynia Polska 56 b/5
+20,Aleksandra,surname:Kowalska,Gdynia Starowiejska 16 b/5
+21,Laura,surname:Dabrowska,Gdynia Akademicka 12 a/1
+22,Aleksandra,surname:Lewandowska|maiden_name:Nowak,Gdynia Slowackiego 97 b/4
+23,Michalina,surname:Szymanska,Gdynia Polska 27 b/1
+24,Jagoda,surname:Kowalczyk,Gdynia Derdowskiego 12 c/4
+25,Wiktoria,surname:Krawczyk,Gdynia Wiczlina 80 a/8
+26,Nikola,surname:Nowak|maiden_name:Labudda,Gdynia Derdowskiego 33 a/9
+27,Nikola,surname:Wozniak,Gdynia Chwarznienska 5 a/1
+28,Aleksandra,surname:Krawczyk,Gdynia Marynarki Polskiej 23 88 c/1
+29,Jagoda,surname:Dabrowska|maiden_name:Kowalska,Gdynia Jana z Kolna 91 a/9
+30,Gabriela,surname:Wojciechowska,Gdynia Legionow 59 b/10
