@@ -48,5 +48,4 @@ def write_grading_to_csv(filename, num_records):
             record['grade'] = str(record['grade'])
             writer.writerow(record)
 
-# Usage
 write_grading_to_csv('data/grading_data.csv', 100)
