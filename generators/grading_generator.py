@@ -1,7 +1,6 @@
 import csv
 import random
 
-# Sample data for student, course, teacher, group IDs
 students = [i for i in range(1, 101)]
 courses = [i for i in range(1, 51)]
 teachers = [i for i in range(1, 51)]
