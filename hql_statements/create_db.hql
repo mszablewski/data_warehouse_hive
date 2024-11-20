@@ -1,6 +1,7 @@
-CREATE DATADASE warehouse_project;
+CREATE DATABASE warehouse_project;
 
 -- create grading table 
+-- TODO add partitioning and bucketing
 CREATE TABLE IF NOT EXISTS grading(grading_id int, student_id int, teacher_id int,date_id int, group_id int,percentage_of_points float);
 
 -- load data into grading table (internal table)
