@@ -7,11 +7,11 @@ CREATE TABLE IF NOT EXISTS grading(grading_id int, student_id int, teacher_id in
 LOAD DATA LOCAL INPATH 'Grading.csv'
 OVERWRITE INTO TABLE Grading
 
--- create group table (external table)
+-- create groups table (external table)
 CREATE EXTERNAL TABLE Groups(group_id int, group_name string, starting_year int)
 LOCATION 'hdfs:///user/andb44/database/groups';
 
--- create course table (external table)
+-- create courses table (external table)
 CREATE TABLE IF NOT EXISTS Courses_tmp(course_id int, name_of_course string, course_year string)
 LOAD DATA LOCAL INPATH 'courses.csv'
 OVERWRITE INTO TABLE Courses_tmp
@@ -33,6 +33,18 @@ SELECT * FROM Courses_tmp WHERE course_year = "third year" PARTITION (course_yea
 INSERT INTO Courses
 SELECT * FROM Courses_tmp WHERE course_year = "fourth year" PARTITION (course_year="fourth year");
 
--- create date table (external table)
+-- create dates table (external table)
 CREATE EXTERNAL TABLE Dates(date_id int, full_date date, year int, month string, month_no int)
 LOCATION 'hdfs:///user/andb44/database/dates';
+
+-- create teachers table (external table)
+CREATE EXTERNAL TABLE Teachers(teacher_id int, name string, surnames MAP<string, string>, address string)
+ROW FORMAT DELIMETED 
+FIELDS TERMINATED BY ','
+COLLECTION ITEMS TERMINATED '|'
+MAP KEYS TERMINATED BY ':'
+LOCATION 'hdfs:///user/andb44/database/teachers';
+
+-- create students table (external table)
+CREATE EXTERNAL TABLE Students(student_id int, name string, surname string)
+LOCATION 'hdfs:///user/andb44/database/students';
