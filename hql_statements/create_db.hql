@@ -1,12 +1,22 @@
+-- TODO add different storing types
 CREATE DATABASE warehouse_project;
 
 -- create grading table 
--- TODO add partitioning and bucketing
-CREATE TABLE IF NOT EXISTS grading(grading_id int, student_id int, teacher_id int,date_id int, group_id int,percentage_of_points float);
+SET hive.exec.dynamic.partition = true;
+SET hive.exec.dynamic.partition.mode = nonstrict;
 
--- load data into grading table (internal table)
+CREATE TABLE IF NOT EXISTS Grading_tmp(grading_id int, student_id int, teacher_id int,date_id int, group_id int,percentage_of_points float)
 LOAD DATA LOCAL INPATH 'Grading.csv'
-OVERWRITE INTO TABLE Grading
+OVERWRITE INTO TABLE Grading_tmp;
+
+CREATE TABLE IF NOT EXISTS Grading(grading_id int, student_id int, teacher_id int,date_id int, group_id int,percentage_of_points float)
+PARTITIONED BY (group_id int)
+CLUSTERED BY (student_id) INTO 4 BUCKETS;
+
+INSERT OVERWRITE TABLE Grading 
+PARTITION(group_id)
+
+SELECT * FROM Grading_tmp
 
 -- create groups table (external table)
 CREATE EXTERNAL TABLE Groups(group_id int, group_name string, starting_year int)
