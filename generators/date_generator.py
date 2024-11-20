@@ -16,7 +16,7 @@ data = {
 
 df = pd.DataFrame(data)
 
-output_file = "data/date_generator_output.csv"
+output_file = "data/date_table.csv"
 df.to_csv(output_file, index=False)
 
 print(f"CSV file '{output_file}' has been generated.")
