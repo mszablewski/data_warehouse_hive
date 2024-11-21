@@ -50,17 +50,27 @@ LOCATION 'hdfs:///user/andb44/database/dates';
 
 -- create teachers table (external table)
 CREATE EXTERNAL TABLE Teachers(teacher_id int, name string, surnames MAP<string, string>, address string)
-ROW FORMAT DELIMETED 
+ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY ','
 COLLECTION ITEMS TERMINATED '|'
 MAP KEYS TERMINATED BY ':'
 LOCATION 'hdfs:///user/andb44/database/teachers';
 
 -- create students table (external table)
-CREATE TABLE IF NOT EXISTS Students(student_id int, name string, surname string)
-STORED AS TEXTFILE
-LOAD DATA LOCAL INPATH 'students/students.csv'
-OVERWRITE INTO TABLE Students;
+CREATE TABLE IF NOT EXISTS Students_tmp(
+  student_id INT, 
+  name STRING, 
+  surname STRING
+)
+ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE;
+LOAD DATA LOCAL INPATH 'Students.csv'
+OVERWRITE INTO TABLE Students_tmp;
 
 CREATE EXTERNAL TABLE Students(student_id int, name string, surname string)
-LOCATION 'hdfs:///user/andb44/database/students';
+ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY ',' 
+STORED AS PARQUET;
+
+INSERT INTO Students SELECT * FROM Students_tmp;
