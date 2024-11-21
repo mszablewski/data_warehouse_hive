@@ -15,7 +15,7 @@ CLUSTERED BY (student_id) INTO 4 BUCKETS;
 
 INSERT OVERWRITE TABLE Grading 
 PARTITION(group_id)
-
+STORED AS ORC
 SELECT * FROM Grading_tmp
 
 -- create groups table (external table)
@@ -24,7 +24,7 @@ LOCATION 'hdfs:///user/andb44/database/groups';
 
 -- create courses table (external table)
 CREATE TABLE IF NOT EXISTS Courses_tmp(course_id int, name_of_course string, course_year string)
-LOAD DATA LOCAL INPATH 'courses.csv'
+LOAD DATA LOCAL INPATH 'courses/courses.csv'
 OVERWRITE INTO TABLE Courses_tmp
 
 CREATE EXTERNAL TABLE Courses(course_id int, name_of_course string, course_year string)
@@ -57,5 +57,10 @@ MAP KEYS TERMINATED BY ':'
 LOCATION 'hdfs:///user/andb44/database/teachers';
 
 -- create students table (external table)
+CREATE TABLE IF NOT EXISTS Students(student_id int, name string, surname string)
+STORED AS TEXTFILE
+LOAD DATA LOCAL INPATH 'students/students.csv'
+OVERWRITE INTO TABLE Students;
+
 CREATE EXTERNAL TABLE Students(student_id int, name string, surname string)
 LOCATION 'hdfs:///user/andb44/database/students';
