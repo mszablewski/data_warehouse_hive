@@ -1,4 +1,3 @@
--- TODO add different storing types
 CREATE DATABASE warehouse_project;
 
 -- create grading table 
