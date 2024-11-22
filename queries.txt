@@ -1,10 +1,7 @@
 Get average grading for each group from last month
-Get 5 students with best average grade
-Get 10 students with worst average grade
+Get 5 students with best average percentage points
+Get 10 students with worst average percentage points
 Get teachers with best average points got by their students last month
-Get average percentage points, grade and time used for each student
+Get average percentage points for each student
 Get group with best average points 
-Get average grade on each academic year (course_year)
-Get name with best average grade 
-Get average grade by month
-Get average time used by month
+Get average percentage points on each academic year (course_year)
