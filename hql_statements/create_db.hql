@@ -5,14 +5,26 @@ CREATE DATABASE warehouse_project;
 SET hive.exec.dynamic.partition = true;
 SET hive.exec.dynamic.partition.mode = nonstrict;
 
-CREATE TABLE IF NOT EXISTS Grading_tmp(student_id int, course_id int, teacher_id int,date_id int, percentage_of_points ARRAY<float>, group_id int)
+CREATE TABLE IF NOT EXISTS Grading_tmp(
+    student_id int, 
+    course_id int, 
+    teacher_id int,
+    date_id int, 
+    percentage_of_points ARRAY<float>, 
+    group_id int)
 ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY ',' 
+COLLECTION ITEMS TERMINATED BY '|'
 STORED AS TEXTFILE;
 LOAD DATA LOCAL INPATH 'Grading.csv'
 OVERWRITE INTO TABLE Grading_tmp;
 
-CREATE TABLE IF NOT EXISTS Grading(student_id int, course_id int, teacher_id int, date_id int, percentage_of_points ARRAY<float>, group_id int)
+CREATE TABLE IF NOT EXISTS Grading(
+    student_id int, 
+    course_id int, 
+    teacher_id int, 
+    date_id int, 
+    percentage_of_points ARRAY<float>)
 PARTITIONED BY (group_id int)
 CLUSTERED BY (student_id) INTO 4 BUCKETS
 ROW FORMAT DELIMITED 
