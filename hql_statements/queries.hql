@@ -65,7 +65,7 @@ GROUP BY group_id
 ORDER BY avg_percentage_of_points DESC
 LIMIT 1;
 
--- działa
+
 -- 7. Average percentage points for each academic year
 SELECT course_year, AVG(percentage_of_points[SIZE(percentage_of_points) - 1]) AS avg_percentage_of_points
 FROM Grading
