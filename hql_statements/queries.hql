@@ -50,11 +50,12 @@ GROUP BY teacher_id
 ORDER BY avg_percentage_of_points DESC
 LIMIT 5;
 
--- do zmiany powiela sie z 2
--- -- 5. Average percentage of points for each student
--- SELECT student_id, AVG(percentage_of_points) AS avg_percentage_of_points
--- FROM Grading
--- GROUP BY student_id;
+-- 5. Average performance by month for selected student
+SELECT student_id, year, month_no, month, AVG(percentage_of_points[SIZE(percentage_of_points) - 1]) AS avg_percentage_of_points
+FROM Grading
+JOIN Dates ON Grading.date_id = Dates.date_id
+WHERE student_id = 43
+GROUP BY student_id, year, month_no, month;
 
 
 -- 6. Group with the best average points
