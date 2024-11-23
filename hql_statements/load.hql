@@ -1,3 +1,5 @@
+USE warehouse_project_44_29;
+
 -- load data into temp table for grading table
 LOAD DATA LOCAL INPATH 'Grading.csv'
 OVERWRITE INTO TABLE Grading_tmp;

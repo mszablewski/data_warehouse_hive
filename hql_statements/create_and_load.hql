@@ -1,4 +1,5 @@
-CREATE DATABASE warehouse_project;
+-- CREATE DATABASE warehouse_project;
+-- USE warehouse_project_44_29;
 
 -- create grading table 
 SET hive.exec.dynamic.partition = true;
