@@ -1,14 +1,5 @@
 -- USE warehouse_project_44_29;
 
--- NOTES
--- As we used dates from the 2020/2021 query for last month/ year results in empty response.
--- Change last month for September 2020
-
--- For every grading fact there is a possibility for more than one percentage_points value as 
--- multiple attempts are possible for every grade obtained. In such cases the last percentage_points are taken into 
--- considerations (if not specified otherwise)
-
-
 -- 1. Average grading for each group last month
 -- SELECT group_id, AVG(percentage_of_points[SIZE(percentage_of_points) - 1]) AS avg_percentage_of_points
 -- FROM Grading
