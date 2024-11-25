@@ -52,9 +52,9 @@ LOCATION 'hdfs:///user/andb44/database/dates';
 CREATE EXTERNAL TABLE Teachers(teacher_id int, name string, surnames MAP<string, string>, address string)
 ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY ','
-COLLECTION ITEMS TERMINATED '|'
+COLLECTION ITEMS TERMINATED BY '|'
 MAP KEYS TERMINATED BY ':'
-LOCATION 'hdfs:///user/andb44/database/teachers';
+LOCATION 'hdfs:///user/andb44/warehouse_project/teachers/Teachers.csv';
 
 -- create students table (external table)
 CREATE TABLE IF NOT EXISTS Students_tmp(
